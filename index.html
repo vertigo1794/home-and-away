@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home &amp; Away</title>
+  <meta name="description" content="Home &amp; Away: two mobile apps, one team. Meet Renly and Sky Saver.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-scene="dark">
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">Home &amp; Away</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#renly">Renly</a>
+        <a href="#flight">Sky Saver</a>
+        <a href="#explore">Explore</a>
+        <a href="#compare">Compare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- RIBBON -->
+    <div class="ribbon">
+      <p>Renly v1.0.1 is now available for Android. <a href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk">Download</a></p>
+    </div>
+
+    <!-- INTRO: 3D app icon over a grid of icons; zooms away on scroll -->
+    <section class="intro" id="intro" data-scene="dark" data-icon="renly">
+      <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="g-tile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b6b72"/><stop offset="1" stop-color="#2a2a2e"/></linearGradient>
+        </defs>
+        <symbol id="i-house" viewBox="0 0 24 24"><path d="M3 11.2 12 3.8l9 7.4V20a1 1 0 0 1-1 1h-5.2v-6H9.2v6H4a1 1 0 0 1-1-1z"/></symbol>
+        <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8.5L4 21V5a1 1 0 0 1 1-1z"/></symbol>
+        <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5V10a2 2 0 0 0 0 4v3.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5V14a2 2 0 0 0 0-4z"/></symbol>
+      </svg>
+      <div class="intro-grid" id="intro-grid" aria-hidden="true"></div>
+      <div class="intro-icon-wrap" aria-hidden="true">
+        <div class="intro-icon" id="intro-icon">
+          <img class="glyph glyph--renly" src="assets/renly-logo-mark.png" alt="">
+          <img class="glyph glyph--sky" src="assets/skysaver-logo-mark.png" alt="">
+        </div>
+      </div>
+      <div class="intro-text">
+        <p class="eyebrow intro-anim">Introducing</p>
+        <h1 class="hero-title intro-anim">Home <span class="amp">&amp;</span> Away</h1>
+        <p class="hero-sub intro-anim">One helps you find a home. One takes you away.</p>
+      </div>
+      <p class="intro-hint intro-anim">Scroll to explore</p>
+    </section>
+
+    <!-- FILM: card that grows to full screen as you scroll (Apple-style). Manual play; a finished film slides to the next. -->
+    <section class="film" id="highlights" data-scene="dark">
+      <div class="film-pin">
+        <h2 class="film-title">Get the highlights.</h2>
+        <div class="film-frame" id="film-frame">
+          <div class="film-track" id="film-track">
+            <article class="film-slide" aria-label="Renly film">
+              <video src="assets/Create_video_using_Renly_app_20261007012239.mp4" poster="assets/renly-film-poster.jpg" playsinline preload="metadata"></video>
+              <div class="film-overlay">
+                <p class="film-caption"><strong>Renly.</strong> Find your buyer. Faster.</p>
+                <button class="film-play" aria-label="Play the Renly film"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11a.8.8 0 0 0 1.2.7l9-5.5a.8.8 0 0 0 0-1.4l-9-5.5A.8.8 0 0 0 4 2.5z" fill="currentColor"/></svg>Play film</button>
+              </div>
+            </article>
+            <article class="film-slide" aria-label="Sky Saver film">
+              <video src="assets/SkySaver_video_generation_prompt_20261008012528.mp4" poster="assets/skysaver-film-poster.jpg" playsinline preload="metadata"></video>
+              <div class="film-overlay">
+                <p class="film-caption"><strong>Sky Saver.</strong> The sky, in your pocket.</p>
+                <button class="film-play" aria-label="Play the Sky Saver film"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11a.8.8 0 0 0 1.2.7l9-5.5a.8.8 0 0 0 0-1.4l-9-5.5A.8.8 0 0 0 4 2.5z" fill="currentColor"/></svg>Play film</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="reel-controls film-controls">
+          <button class="reel-btn" id="film-prev" aria-label="Previous film"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="reel-dots">
+            <button class="reel-dot" aria-label="Show Renly film"><span></span></button>
+            <button class="reel-dot" aria-label="Show Sky Saver film"><span></span></button>
+          </div>
+          <button class="reel-btn" id="film-next" aria-label="Next film"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="reel-btn is-paused" id="film-play" aria-label="Play"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path class="i-play" d="M5 3l8 5-8 5z" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" data-scene="dark">
+      <p class="eyebrow reveal">The project</p>
+      <p class="statement">Every great app starts with a small, everyday problem.</p>
+      <p class="statement">We each picked one, and built a mobile app to solve it.</p>
+      <p class="statement">One for property agents. One for travellers. Here they are.</p>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" data-scene="dark">
+      <div class="container stats-grid">
+        <div class="stat reveal"><p class="stat-num"><span data-count="2">2</span></p><p class="stat-label">apps, built from scratch</p></div>
+        <div class="stat reveal"><p class="stat-num"><span data-count="22">22</span></p><p class="stat-label">screens designed<sup class="fn"><a href="#fn-1" aria-label="Footnote 1">1</a></sup></p></div>
+        <div class="stat reveal"><p class="stat-num"><span data-count="6">6</span></p><p class="stat-label">core features</p></div>
+        <div class="stat reveal"><p class="stat-num"><span data-count="14">14</span></p><p class="stat-label">weeks of work</p></div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team" data-scene="light">
+      <div class="container">
+        <p class="eyebrow reveal">The team</p>
+        <h2 class="section-title reveal">Meet the makers.</h2>
+        <div class="team-grid">
+          <article class="member reveal" style="--accent: var(--renly-accent)">
+            <img src="assets/photo_6282632892093504268_x.jpg" alt="Photo of Fakhrullah Bin Rassul" style="object-position: 50% 40%">
+            <div class="member-body">
+              <p class="member-role">Developer · Renly</p>
+              <h3>Fakhrullah Bin Rassul</h3>
+              <p>Designed and built Renly with Flutter and Supabase to help property agents spend less time chasing leads and more time closing deals. From listings to real-time chat, every screen is made for agents on the move.</p>
+              <div class="member-actions"><a href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk" class="btn btn--sm"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>APK</a><a href="#renly" class="link">See Renly</a></div>
+            </div>
+          </article>
+          <article class="member reveal" style="--accent: var(--flight-accent-strong)">
+            <img src="assets/Gemini_Generated_Image_maasskmaasskmaas.jpg" alt="Photo of Mohamad Hairi Bin Abdul Ahmad" style="object-position: 50% 52%">
+            <div class="member-body">
+              <p class="member-role">Developer · Sky Saver</p>
+              <h3>Mohamad Hairi Bin Abdul Ahmad</h3>
+              <p>Designed and built Sky Saver to make booking a trip feel effortless. Search a route, pick a seat and keep your boarding pass ready, all in a few taps, because planning a trip should be as easy as taking one.</p>
+              <div class="member-actions"><a href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk" class="btn btn--sm"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>APK</a><a href="#flight" class="link">See Sky Saver</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RENLY -->
+    <section class="showcase" id="renly" data-scene="renly" style="--accent: var(--renly-accent); --tile: #ffffff">
+      <nav class="subnav" aria-label="Renly">
+        <div class="container subnav-inner">
+          <a href="#renly" class="subnav-title">Renly</a>
+          <div class="subnav-links">
+            <a href="#renly-features">Features</a>
+            <a href="#renly-highlights">Highlights</a>
+            <a class="btn btn--xs" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk">Download</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container showcase-head">
+        <p class="eyebrow reveal">Built by Fakhrullah Bin Rassul</p>
+        <h2 class="app-name reveal">Renly<span>.</span></h2>
+        <p class="app-tagline reveal">Find your buyer. Faster.</p>
+        <p class="app-desc reveal">Renly helps property agents manage listings, discover serious buyers, and turn conversations into viewings, all from one app.</p>
+        <div class="cta reveal">
+          <a class="btn" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
+          <a class="link" href="https://github.com/vertigo1794/renly" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="cta-meta reveal">For Android</p>
+      </div>
+      <div class="container showcase-body" id="renly-features">
+        <div class="showcase-phone">
+          <div class="phone phone--metal metal-renly phone--tall"><div class="screen">
+            <img src="assets/listing.jpg" alt="Renly listings screen" class="is-active">
+            <img src="assets/buyer-public.jpg" alt="Renly buyer matches screen">
+            <img src="assets/chat-public.jpg" alt="Renly lead chat screen">
+          </div></div>
+        </div>
+        <div class="features">
+          <div class="feature" data-screen="0">
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/listing.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">01</p>
+            <h3>Every listing, beautifully organised.</h3>
+            <p>Post properties with photos, price and details. Keep everything you sell in one clean feed.</p>
+          </div>
+          <div class="feature" data-screen="1">
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/buyer-public.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">02</p>
+            <h3>Buyers, matched for you.</h3>
+            <p>Renly ranks interested buyers by budget and preference, so you call the right people first.</p>
+          </div>
+          <div class="feature" data-screen="2">
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/chat-public.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">03</p>
+            <h3>From chat to viewing.</h3>
+            <p>Talk to leads and lock in viewing appointments without leaving the app.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container bento" id="renly-highlights">
+        <h3 class="bento-heading reveal">Highlights.</h3>
+        <div class="bento-grid">
+          <div class="tile tile--hero reveal"><p class="tile-kicker">Tech stack</p><p class="tile-big">Built with Flutter.</p><div class="chips"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Google Maps</span></div></div>
+          <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="12">12</span></p><p class="tile-kicker">screens</p></div>
+          <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="3">3</span></p><p class="tile-kicker">core features</p></div>
+          <div class="tile reveal"><p class="tile-kicker">Supabase Auth</p><p class="tile-title">Secure sign-in for every agent.</p></div>
+          <div class="tile reveal"><p class="tile-kicker">Supabase Realtime</p><p class="tile-title">Chats that update in real time.</p></div>
+          <div class="tile reveal"><p class="tile-kicker">Google Maps</p><p class="tile-title">Every listing, pinned on the map.</p></div>
+        </div>
+      </div>
+      <div class="container specs">
+        <h3 class="bento-heading reveal">Tech specs.</h3>
+        <div class="spec-figures reveal"><div><p class="spec-kicker">All</p><p class="spec-big">Flutter</p><p class="spec-sub">one codebase, native feel</p></div><div><p class="spec-kicker">Only</p><p class="spec-big">73 MB</p><p class="spec-sub">download size<sup class="fn"><a href="#fn-4" aria-label="Footnote 4">4</a></sup></p></div><div><p class="spec-kicker">Up to</p><p class="spec-big">60 fps</p><p class="spec-sub">smooth scrolling<sup class="fn"><a href="#fn-2" aria-label="Footnote 2">2</a></sup></p></div></div>
+        <div class="spec-list reveal"><div><h4>Platform</h4><p>Android 8.0 (API 26) and later</p></div><div><h4>Backend</h4><p>Supabase · PostgreSQL · Auth · Realtime</p></div><div><h4>Version</h4><p>1.0.1 · Release build</p></div></div>
+      </div>
+    </section>
+
+    <!-- FLIGHT TRAVEL -->
+    <section class="showcase showcase--reverse" id="flight" data-scene="flight" style="--accent: var(--flight-accent); --on-accent: #0a1630; --tile: #13244a">
+      <nav class="subnav" aria-label="Sky Saver">
+        <div class="container subnav-inner">
+          <a href="#flight" class="subnav-title">Sky Saver</a>
+          <div class="subnav-links">
+            <a href="#flight-features">Features</a>
+            <a href="#flight-highlights">Highlights</a>
+            <a class="btn btn--xs" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk">Download</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container showcase-head">
+        <p class="eyebrow reveal">Built by Mohamad Hairi Bin Abdul Ahmad</p>
+        <h2 class="app-name reveal">Sky Saver<span>.</span></h2>
+        <p class="app-tagline reveal">The sky, in your pocket.</p>
+        <p class="app-desc reveal">Sky Saver makes booking a trip simple: search routes, pick your seat, and keep your boarding pass ready.</p>
+        <!-- TODO: replace USERNAME/sky-saver with the real repo -->
+        <div class="cta reveal">
+          <a class="btn" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
+          <a class="link" href="https://github.com/USERNAME/sky-saver" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="cta-meta reveal">For Android</p>
+      </div>
+      <div class="container showcase-body" id="flight-features">
+        <div class="showcase-phone">
+          <div class="phone phone--metal metal-flight phone--tall"><div class="screen">
+            <img src="assets/skysaver-search.jpg" alt="Sky Saver search screen" class="is-active">
+            <img src="assets/skysaver-seats.jpg" alt="Sky Saver seat selection screen">
+            <img src="assets/skysaver-pass.jpg" alt="Sky Saver boarding pass screen">
+          </div></div>
+        </div>
+        <div class="features">
+          <div class="feature" data-screen="0">
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-search.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">01</p>
+            <h3>Search the world in seconds.</h3>
+            <p>Pick where you are, where you are going, and when. Deals show up right below.</p>
+          </div>
+          <div class="feature" data-screen="1">
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-seats.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">02</p>
+            <h3>Choose your seat. Literally.</h3>
+            <p>A clear seat map shows what is free, so window or aisle is one tap away.</p>
+          </div>
+          <div class="feature" data-screen="2">
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-pass.jpg" alt="" class="is-active"></div></div>
+            <p class="feature-num">03</p>
+            <h3>Your boarding pass, always ready.</h3>
+            <p>Gate, seat and time in one place. Scan and board.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container bento" id="flight-highlights">
+        <h3 class="bento-heading reveal">Highlights.</h3>
+        <div class="bento-grid">
+          <div class="tile tile--hero reveal"><p class="tile-kicker">Tech stack</p><p class="tile-big">Built with Kotlin.</p><div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Retrofit</span><span class="chip">Room</span></div></div>
+          <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="10">10</span></p><p class="tile-kicker">screens</p></div>
+          <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="500">500</span>+</p><p class="tile-kicker">routes searchable<sup class="fn"><a href="#fn-3" aria-label="Footnote 3">3</a></sup></p></div>
+          <div class="tile reveal"><p class="tile-kicker">Seat map</p><p class="tile-title">Live availability, row by row.</p></div>
+          <div class="tile reveal"><p class="tile-kicker">Offline pass</p><p class="tile-title">Boarding pass works with no signal.</p></div>
+          <div class="tile reveal"><p class="tile-kicker">Price alerts</p><p class="tile-title">Get notified when fares drop.</p></div>
+        </div>
+      </div>
+      <div class="container specs">
+        <h3 class="bento-heading reveal">Tech specs.</h3>
+        <div class="spec-figures reveal"><div><p class="spec-kicker">All</p><p class="spec-big">Kotlin</p><p class="spec-sub">fully native Android</p></div><div><p class="spec-kicker">Only</p><p class="spec-big">40 MB</p><p class="spec-sub">download size</p></div><div><p class="spec-kicker">Up to</p><p class="spec-big">60 fps</p><p class="spec-sub">smooth scrolling<sup class="fn"><a href="#fn-2" aria-label="Footnote 2">2</a></sup></p></div></div>
+        <div class="spec-list reveal"><div><h4>Platform</h4><p>Android 8.0 (API 26) and later</p></div><div><h4>Architecture</h4><p>MVVM · Jetpack Compose</p></div><div><h4>Data</h4><p>Retrofit · Room offline cache</p></div></div>
+      </div>
+    </section>
+
+    <!-- EXPLORE: feature explorer + finish picker -->
+    <section class="explore" id="explore" data-scene="dark">
+      <div class="container">
+        <p class="eyebrow reveal">Explore</p>
+        <h2 class="section-title reveal">Take a closer look.</h2>
+        <div class="segmented reveal" role="tablist" aria-label="Choose an app">
+          <button role="tab" aria-selected="true" data-app="renly" data-metal="metal-renly">Renly</button>
+          <button role="tab" aria-selected="false" data-app="flight" data-metal="metal-flight">Sky Saver</button>
+        </div>
+        <div class="explore-body">
+          <div class="explore-list">
+            <div class="explore-group" data-app="renly">
+            <button class="explore-item is-open" aria-expanded="true" data-screen="assets/listing.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Listings</span><span class="explore-desc">Post a property in under a minute: photos, price, size and location, all in one clean form.</span></button>
+            <button class="explore-item" aria-expanded="false" data-screen="assets/buyer-public.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Buyer matching</span><span class="explore-desc">Every interested buyer gets a match score based on budget and preference, so you know who to call first.</span></button>
+            <button class="explore-item" aria-expanded="false" data-screen="assets/chat-public.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Lead chat</span><span class="explore-desc">Reply to leads, share details and book viewings without switching apps.</span></button>
+            </div>
+            <div class="explore-group" data-app="flight" hidden>
+            <button class="explore-item is-open" aria-expanded="true" data-screen="assets/skysaver-search.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Flight search</span><span class="explore-desc">Pick your route and date. Prices and popular deals show up instantly.</span></button>
+            <button class="explore-item" aria-expanded="false" data-screen="assets/skysaver-seats.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Seat selection</span><span class="explore-desc">A live seat map shows what is taken and what is free. Tap to choose.</span></button>
+            <button class="explore-item" aria-expanded="false" data-screen="assets/skysaver-pass.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Boarding pass</span><span class="explore-desc">Gate, seat and boarding time in one card, ready even without signal.</span></button>
+            </div>
+          </div>
+          <div class="explore-visual">
+            <div class="phone phone--metal metal-renly" id="explore-phone"><div class="screen"><img id="explore-img" src="assets/listing.jpg" alt="Selected feature screen" class="is-active"></div></div>
+            <p class="swatch-name" id="swatch-name">Emerald Titanium</p>
+            <div class="swatches" role="group" aria-label="Phone finish">
+              <button class="swatch" data-metal="metal-renly" data-name="Emerald Titanium" aria-pressed="true" aria-label="Emerald Titanium" style="--sw: #2f8f6d"></button>
+              <button class="swatch" data-metal="metal-flight" data-name="Ocean Titanium" aria-pressed="false" aria-label="Ocean Titanium" style="--sw: #3d8fd6"></button>
+              <button class="swatch" data-metal="metal-graphite" data-name="Graphite" aria-pressed="false" aria-label="Graphite" style="--sw: #4a4a4f"></button>
+              <button class="swatch" data-metal="metal-silver" data-name="Silver" aria-pressed="false" aria-label="Silver" style="--sw: #d8d8dc"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="compare" id="compare" data-scene="light">
+      <div class="container">
+        <p class="eyebrow reveal">Compare</p>
+        <h2 class="section-title reveal">Which one is for you?</h2>
+        <div class="compare-grid reveal">
+          <div class="compare-col" style="--accent: var(--renly-accent)">
+            <div class="phone phone--metal metal-renly compare-phone"><div class="screen"><img src="assets/renly-1.png" alt="" class="is-active"></div></div>
+            <h3>Renly</h3>
+            <p class="compare-tag">Find your buyer. Faster.</p>
+            <a class="btn" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
+            <dl>
+              <dt>Made for</dt><dd>Property agents</dd>
+              <dt>Platform</dt><dd>Android 8.0 and later</dd>
+              <dt>Built with</dt><dd>Flutter · Dart</dd>
+              <dt>Backend</dt><dd>Supabase · PostgreSQL</dd>
+              <dt>Key features</dt><dd>Listings · Buyer matching · Lead chat</dd>
+              <dt>Download size</dt><dd>73 MB</dd>
+            </dl>
+          </div>
+          <div class="compare-col" style="--accent: var(--flight-accent-strong)">
+            <div class="phone phone--metal metal-flight compare-phone"><div class="screen"><img src="assets/flight-1.png" alt="" class="is-active"></div></div>
+            <h3>Sky Saver</h3>
+            <p class="compare-tag">The sky, in your pocket.</p>
+            <a class="btn" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
+            <dl>
+              <dt>Made for</dt><dd>Travellers</dd>
+              <dt>Platform</dt><dd>Android 8.0 and later</dd>
+              <dt>Built with</dt><dd>Kotlin · Jetpack Compose</dd>
+              <dt>Backend</dt><dd>REST API · Room database</dd>
+              <dt>Key features</dt><dd>Flight search · Seat map · Boarding pass</dd>
+              <dt>Download size</dt><dd>40 MB</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" data-scene="light">
+      <div class="container faq-inner">
+        <h2 class="section-title reveal">Questions? Answers.</h2>
+        <details class="reveal">
+          <summary>How do I install the APK?</summary>
+          <p>Tap Download APK on your Android phone, open the file when it finishes, and tap Install. That's it.</p>
+        </details>
+        <details class="reveal">
+          <summary>Why does Android warn me about "unknown apps"?</summary>
+          <p>Android shows this for any app that doesn't come from the Play Store. Allow your browser to install apps when asked, then install as usual.</p>
+        </details>
+        <details class="reveal">
+          <summary>Is there an iPhone version?</summary>
+          <p>Not yet. Both apps are Android-only for now.</p>
+        </details>
+        <details class="reveal">
+          <summary>Are these apps free?</summary>
+          <p>Yes. Both were built as a university project and are free to try.</p>
+        </details>
+        <details class="reveal">
+          <summary>Where can I see the source code?</summary>
+          <p>Each app has a public GitHub repository. You'll find the links in the footer.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" data-scene="dark">
+    <div class="container">
+      <p class="footer-title">Home &amp; Away</p>
+      <p class="footer-meta">Mobile Application Development · Semester 4</p>
+      <div class="footer-cta">
+        <a class="btn" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk" style="--accent: var(--renly-accent)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download Renly</a>
+        <a class="btn" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk" style="--accent: var(--flight-accent); --on-accent: #0a1630"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download Sky Saver</a>
+      </div>
+      <ol class="footnotes">
+        <li id="fn-1">Screen and feature counts reflect the builds submitted for this course.</li>
+        <li id="fn-2">Measured on a mid-range Android test device. Actual performance may vary.</li>
+        <li id="fn-3">Route data is sample data used for demonstration.</li>
+        <li id="fn-4">Size of the latest GitHub release. May change with future updates.</li>
+      </ol>
+      <div class="footer-cols">
+        <div><p class="footer-label">Renly</p><p>Fakhrullah Bin Rassul</p></div>
+        <div><p class="footer-label">Sky Saver</p><p>Mohamad Hairi Bin Abdul Ahmad</p></div>
+        <div><p class="footer-label">Links</p><p><a href="https://github.com/vertigo1794/renly" target="_blank" rel="noopener">Renly GitHub</a> · <a href="https://github.com/USERNAME/sky-saver" target="_blank" rel="noopener">Sky Saver GitHub</a> · <a href="#">Demo video</a></p></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

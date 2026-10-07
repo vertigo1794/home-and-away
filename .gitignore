@@ -1,0 +1,24 @@
+# Allowlist: only files the live site uses get published.
+# Original screenshots (with real names), old dummies, notes and tooling stay local.
+*
+!index.html
+!style.css
+!main.js
+!.gitignore
+!assets/
+!assets/Create_video_using_Renly_app_20261007012239.mp4
+!assets/Gemini_Generated_Image_maasskmaasskmaas.jpg
+!assets/SkySaver_video_generation_prompt_20261008012528.mp4
+!assets/buyer-public.jpg
+!assets/chat-public.jpg
+!assets/flight-1.png
+!assets/listing.jpg
+!assets/photo_6282632892093504268_x.jpg
+!assets/renly-1.png
+!assets/renly-film-poster.jpg
+!assets/renly-logo-mark.png
+!assets/skysaver-film-poster.jpg
+!assets/skysaver-logo-mark.png
+!assets/skysaver-pass.jpg
+!assets/skysaver-search.jpg
+!assets/skysaver-seats.jpg
