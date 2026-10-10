@@ -17,7 +17,7 @@ A property app for real-estate agents. Post listings, browse a co-broking market
 
 - Built by **Fakhrullah Bin Rassul**
 - Flutter + Supabase
-- Download: [latest Android APK](https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk)
+- Download: [latest Android APK](https://github.com/vertigo1794/renly/releases/latest/download/Renly.apk)
 - Source: [vertigo1794/renly](https://github.com/vertigo1794/renly)
 
 ### Sky Saver
