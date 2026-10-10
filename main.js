@@ -5,7 +5,8 @@ document.addEventListener('click', (e) => {
   const target = href && href.length > 1 && document.querySelector(href);
   if (!target) return;
   e.preventDefault();
-  target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+  if (window.lenis) lenis.scrollTo(target, { duration: 1.4 });
+  else target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
 });
 
 if (reduceMotion) document.querySelectorAll('video[autoplay]').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
@@ -155,6 +156,14 @@ if (reduceMotion) document.querySelectorAll('video[autoplay]').forEach((v) => { 
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Smooth wheel/trackpad scrolling (touch stays native), driven by GSAP's ticker so pins and scrubs stay in step
+  if (window.Lenis && !reduceMotion) {
+    window.lenis = new Lenis({ lerp: 0.085, wheelMultiplier: 1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((t) => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+
   // Sticky phone: swap screen + highlight the feature currently in the middle.
   document.querySelectorAll('.showcase').forEach((showcase) => {
     const screens = showcase.querySelectorAll('.showcase-phone img');
@@ -181,7 +190,7 @@ if (window.gsap && window.ScrollTrigger) {
     gsap.from('.intro-anim', { y: 40, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.12, delay: 0.4 });
 
     // Intro on scroll: pinned; grid spreads and fades, text lifts away, icon zooms past the camera
-    gsap.timeline({ scrollTrigger: { trigger: '.intro', start: 'top top', end: '+=100%', scrub: true, pin: true, invalidateOnRefresh: true, refreshPriority: 1 } })
+    gsap.timeline({ scrollTrigger: { trigger: '.intro', start: 'top top', end: '+=100%', scrub: true, pin: true, invalidateOnRefresh: true, refreshPriority: 20 } })
       .to('.intro-text, .intro-hint', { y: -80, opacity: 0, duration: 0.4 }, 0)
       .to('.intro-grid', { scale: 1.6, opacity: 0, duration: 1 }, 0)
       .to('.intro-icon-wrap', {

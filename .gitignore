@@ -4,6 +4,9 @@
 !index.html
 !style.css
 !main.js
+!effects.css
+!effects.js
+!phone3d.js
 !.gitignore
 !README.md
 !assets/
@@ -23,3 +26,12 @@
 !assets/skysaver-pass.jpg
 !assets/skysaver-search.jpg
 !assets/skysaver-seats.jpg
+!assets/seq/
+!assets/seq/*.jpg
+!assets/1.jpg
+!assets/2.jpg
+!assets/3.jpg
+!assets/phone-web.glb
+!assets/favicon.svg
+!assets/apple-touch-icon.png
+!assets/og.png

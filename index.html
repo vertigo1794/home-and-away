@@ -5,16 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home &amp; Away</title>
   <meta name="description" content="Home &amp; Away: two mobile apps, one team. Meet Renly and Sky Saver.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home &amp; Away">
+  <meta property="og:description" content="Two mobile apps, one team. One helps you find a home. One takes you away.">
+  <meta property="og:url" content="https://vertigo1794.github.io/home-and-away/">
+  <meta property="og:image" content="https://vertigo1794.github.io/home-and-away/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261010061201">
+  <link rel="stylesheet" href="effects.css?v=20261010061201">
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
 </head>
 <body data-scene="dark">
+  <a class="skip-link" href="#highlights">Skip to content</a>
 
   <header class="nav">
     <div class="nav-inner">
-      <a href="#top" class="nav-logo">Home &amp; Away</a>
+      <a href="#top" class="nav-logo"><svg class="progress-ring" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><circle class="progress-ring-fill" cx="10" cy="10" r="8"/></svg>Home &amp; Away</a>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#team">Team</a>
@@ -32,6 +46,18 @@
     <div class="ribbon">
       <p>Renly v1.0.1 is now available for Android. <a href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk">Download</a></p>
     </div>
+
+    <!-- CHAPTER NAV: Apple-style row of icons that jump to each part of the page -->
+    <nav class="chapternav" aria-label="Page sections">
+      <ul>
+        <li><a href="#renly"><span class="cn-icon cn-icon--renly"><img src="assets/renly-logo-mark.png" alt=""></span><span class="cn-label">Renly</span></a></li>
+        <li><a href="#flight"><span class="cn-icon cn-icon--sky"><img src="assets/skysaver-logo-mark.png" alt=""></span><span class="cn-label">Sky Saver</span></a></li>
+        <li><a href="#explore"><span class="cn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9.4 13.8 11.2 12 16l-1.8-4.8L5.5 9.4l4.7-1.8zM18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cn-label">Explore</span></a></li>
+        <li><a href="#compare"><span class="cn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cn-label">Compare</span></a></li>
+        <li><a href="#team"><span class="cn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a6.5 6.5 0 0 1 13 0M16 4.3a3.5 3.5 0 0 1 0 6.4M18.5 14a6.5 6.5 0 0 1 3 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cn-label">Team</span></a></li>
+        <li><a href="#get"><span class="cn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cn-label">Get the apps</span></a></li>
+      </ul>
+    </nav>
 
     <!-- INTRO: 3D app icon over a grid of icons; zooms away on scroll -->
     <section class="intro" id="intro" data-scene="dark" data-icon="renly">
@@ -56,6 +82,7 @@
         <p class="eyebrow intro-anim">Introducing</p>
         <h1 class="hero-title intro-anim">Home <span class="amp">&amp;</span> Away</h1>
         <p class="hero-sub intro-anim">One helps you find a home. One takes you away.</p>
+        <button class="watch-film intro-anim" type="button" aria-haspopup="dialog">Watch the film <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 6.5v7l5.5-3.5z" fill="currentColor"/></svg></button>
       </div>
       <p class="intro-hint intro-anim">Scroll to explore</p>
     </section>
@@ -64,7 +91,7 @@
     <section class="film" id="highlights" data-scene="dark">
       <div class="film-pin">
         <h2 class="film-title">Get the highlights.</h2>
-        <div class="film-frame" id="film-frame">
+        <div class="film-frame" id="film-frame" data-cursor="Play">
           <div class="film-track" id="film-track">
             <article class="film-slide" aria-label="Renly film">
               <video src="assets/Create_video_using_Renly_app_20261007012239.mp4" poster="assets/renly-film-poster.jpg" playsinline preload="metadata"></video>
@@ -102,6 +129,23 @@
       <p class="statement">One for property agents. One for travellers. Here they are.</p>
     </section>
 
+    <!-- MASK: a film plays inside the letters, then the camera dives through the "o" -->
+    <section class="masktext" data-scene="dark" aria-label="Built to move">
+      <div class="masktext-stage">
+        <video src="assets/Create_video_using_Renly_app_20261007012239.mp4" poster="assets/renly-film-poster.jpg" muted autoplay loop playsinline preload="auto" aria-hidden="true"></video>
+        <!-- Black layer with letter-shaped holes over the film (no mix-blend-mode: Safari freezes video under a blend) -->
+        <svg class="masktext-ink" aria-hidden="true">
+          <defs>
+            <mask id="mt-holes" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+              <rect width="100%" height="100%" fill="#fff"/>
+              <g class="mt-words"><text x="50%" y="50%" text-anchor="middle" fill="#000"><tspan x="50%" dy="-.09em">Built</tspan><tspan x="50%" dy=".9em">to move.</tspan></text></g>
+            </mask>
+          </defs>
+          <rect width="100%" height="100%" fill="#000" mask="url(#mt-holes)"/>
+        </svg>
+      </div>
+    </section>
+
     <!-- STATS -->
     <section class="stats" data-scene="dark">
       <div class="container stats-grid">
@@ -119,7 +163,10 @@
         <h2 class="section-title reveal">Meet the makers.</h2>
         <div class="team-grid">
           <article class="member reveal" style="--accent: var(--renly-accent)">
-            <img src="assets/photo_6282632892093504268_x.jpg" alt="Photo of Fakhrullah Bin Rassul" style="object-position: 50% 40%">
+            <div class="member-media" data-cursor="Preview">
+              <img src="assets/photo_6282632892093504268_x.jpg" alt="Photo of Fakhrullah Bin Rassul" style="object-position: 50% 40%" loading="lazy">
+              <video class="member-film" src="assets/Create_video_using_Renly_app_20261007012239.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </div>
             <div class="member-body">
               <p class="member-role">Developer · Renly</p>
               <h3>Fakhrullah Bin Rassul</h3>
@@ -128,7 +175,10 @@
             </div>
           </article>
           <article class="member reveal" style="--accent: var(--flight-accent-strong)">
-            <img src="assets/Gemini_Generated_Image_maasskmaasskmaas.jpg" alt="Photo of Mohamad Hairi Bin Abdul Ahmad" style="object-position: 50% 52%">
+            <div class="member-media" data-cursor="Preview">
+              <img src="assets/Gemini_Generated_Image_maasskmaasskmaas.jpg" alt="Photo of Mohamad Hairi Bin Abdul Ahmad" style="object-position: 50% 52%" loading="lazy">
+              <video class="member-film" src="assets/SkySaver_video_generation_prompt_20261008012528.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+            </div>
             <div class="member-body">
               <p class="member-role">Developer · Sky Saver</p>
               <h3>Mohamad Hairi Bin Abdul Ahmad</h3>
@@ -136,6 +186,16 @@
               <div class="member-actions"><a href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk" class="btn btn--sm"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>APK</a><a href="#flight" class="link">See Sky Saver</a></div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZOOM-THROUGH: giant "Renly." — the camera flies into the R until it fills the screen -->
+    <section class="zoomthru" data-scene="renly" aria-hidden="true">
+      <div class="zoomthru-stage">
+        <div class="zoomthru-group">
+          <p class="zoomthru-word"><span class="zoomthru-o">R</span>enly.</p>
+          <p class="zoomthru-sub">For the agents who never stop.</p>
         </div>
       </div>
     </section>
@@ -166,30 +226,48 @@
       <div class="container showcase-body" id="renly-features">
         <div class="showcase-phone">
           <div class="phone phone--metal metal-renly phone--tall"><div class="screen">
-            <img src="assets/listing.jpg" alt="Renly listings screen" class="is-active">
-            <img src="assets/buyer-public.jpg" alt="Renly buyer matches screen">
-            <img src="assets/chat-public.jpg" alt="Renly lead chat screen">
+            <img src="assets/listing.jpg" alt="Renly listings screen" class="is-active" loading="lazy">
+            <img src="assets/buyer-public.jpg" alt="Renly buyer matches screen" loading="lazy">
+            <img src="assets/chat-public.jpg" alt="Renly lead chat screen" loading="lazy">
           </div></div>
         </div>
         <div class="features">
           <div class="feature" data-screen="0">
-            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/listing.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/listing.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">01</p>
             <h3>Every listing, beautifully organised.</h3>
             <p>Post properties with photos, price and details. Keep everything you sell in one clean feed.</p>
           </div>
           <div class="feature" data-screen="1">
-            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/buyer-public.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/buyer-public.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">02</p>
             <h3>Buyers, matched for you.</h3>
             <p>Renly ranks interested buyers by budget and preference, so you call the right people first.</p>
           </div>
           <div class="feature" data-screen="2">
-            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/chat-public.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-renly feature-phone"><div class="screen"><img src="assets/chat-public.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">03</p>
             <h3>From chat to viewing.</h3>
             <p>Talk to leads and lock in viewing appointments without leaving the app.</p>
           </div>
+        </div>
+      </div>
+      <div class="hscroll" aria-label="Renly screens">
+        <div class="hscroll-track">
+          <div class="hscroll-card"><p class="eyebrow">Swipe through</p><h3>Every screen,<br>one flow.</h3></div>
+          <figure class="hscroll-item">
+            <div class="phone phone--metal metal-renly hscroll-phone"><div class="screen"><img src="assets/1.jpg" alt="Renly onboarding: cross-agency collaboration" class="is-active" loading="lazy"></div></div>
+            <figcaption>Co-broke network</figcaption>
+          </figure>
+          <figure class="hscroll-item">
+            <div class="phone phone--metal metal-renly hscroll-phone"><div class="screen"><img src="assets/2.jpg" alt="Renly onboarding: smart listing matching" class="is-active" loading="lazy"></div></div>
+            <figcaption>Smart matching</figcaption>
+          </figure>
+          <figure class="hscroll-item">
+            <div class="phone phone--metal metal-renly hscroll-phone"><div class="screen"><img src="assets/3.jpg" alt="Renly onboarding: transparent and verified agents" class="is-active" loading="lazy"></div></div>
+            <figcaption>Verified agents</figcaption>
+          </figure>
+          <div class="hscroll-card"><h3>Ready when<br>you are.</h3><a class="btn" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a></div>
         </div>
       </div>
       <div class="container bento" id="renly-highlights">
@@ -210,6 +288,25 @@
       </div>
     </section>
 
+    <!-- CURTAIN: navy rises over Renly's cream and brings in Sky Saver -->
+    <section class="curtain" data-scene="renly" aria-hidden="true">
+      <div class="curtain-stage">
+        <div class="curtain-panel">
+          <img class="curtain-logo" src="assets/skysaver-logo-mark.png" alt="" loading="lazy">
+          <p class="curtain-word">Sky Saver.</p>
+          <p class="curtain-sub">The sky, in your pocket.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEQUENCE: the film's opening, scrubbed frame by frame with the scroll -->
+    <section class="seq" data-scene="flight" aria-label="Sky Saver in motion">
+      <div class="seq-stage">
+        <canvas class="seq-canvas" width="960" height="540" aria-hidden="true"></canvas>
+        <p class="seq-caption">Search. Compare. Fly.</p>
+      </div>
+    </section>
+
     <!-- FLIGHT TRAVEL -->
     <section class="showcase showcase--reverse" id="flight" data-scene="flight" style="--accent: var(--flight-accent); --on-accent: #0a1630; --tile: #13244a">
       <nav class="subnav" aria-label="Sky Saver">
@@ -226,6 +323,7 @@
         <p class="eyebrow reveal">Built by Mohamad Hairi Bin Abdul Ahmad</p>
         <h2 class="app-name reveal">Sky Saver<span>.</span></h2>
         <p class="app-tagline reveal">The sky, in your pocket.</p>
+        <p class="solari reveal" data-text="KUL > SIN" aria-label="Kuala Lumpur to Singapore">KUL &gt; SIN</p>
         <p class="app-desc reveal">Sky Saver makes booking a trip simple: search routes, pick your seat, and keep your boarding pass ready.</p>
         <!-- TODO: replace USERNAME/sky-saver with the real repo -->
         <div class="cta reveal">
@@ -237,26 +335,26 @@
       <div class="container showcase-body" id="flight-features">
         <div class="showcase-phone">
           <div class="phone phone--metal metal-flight phone--tall"><div class="screen">
-            <img src="assets/skysaver-search.jpg" alt="Sky Saver search screen" class="is-active">
-            <img src="assets/skysaver-seats.jpg" alt="Sky Saver seat selection screen">
-            <img src="assets/skysaver-pass.jpg" alt="Sky Saver boarding pass screen">
+            <img src="assets/skysaver-search.jpg" alt="Sky Saver search screen" class="is-active" loading="lazy">
+            <img src="assets/skysaver-seats.jpg" alt="Sky Saver seat selection screen" loading="lazy">
+            <img src="assets/skysaver-pass.jpg" alt="Sky Saver boarding pass screen" loading="lazy">
           </div></div>
         </div>
         <div class="features">
           <div class="feature" data-screen="0">
-            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-search.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-search.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">01</p>
             <h3>Search the world in seconds.</h3>
             <p>Pick where you are, where you are going, and when. Deals show up right below.</p>
           </div>
           <div class="feature" data-screen="1">
-            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-seats.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-seats.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">02</p>
             <h3>Choose your seat. Literally.</h3>
             <p>A clear seat map shows what is free, so window or aisle is one tap away.</p>
           </div>
           <div class="feature" data-screen="2">
-            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-pass.jpg" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-flight feature-phone"><div class="screen"><img src="assets/skysaver-pass.jpg" alt="" class="is-active" loading="lazy"></div></div>
             <p class="feature-num">03</p>
             <h3>Your boarding pass, always ready.</h3>
             <p>Gate, seat and time in one place. Scan and board.</p>
@@ -269,8 +367,15 @@
           <div class="tile tile--hero reveal"><p class="tile-kicker">Tech stack</p><p class="tile-big">Built with Kotlin.</p><div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Retrofit</span><span class="chip">Room</span></div></div>
           <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="10">10</span></p><p class="tile-kicker">screens</p></div>
           <div class="tile tile--stat reveal"><p class="tile-num"><span data-count="500">500</span>+</p><p class="tile-kicker">routes searchable<sup class="fn"><a href="#fn-3" aria-label="Footnote 3">3</a></sup></p></div>
-          <div class="tile reveal"><p class="tile-kicker">Seat map</p><p class="tile-title">Live availability, row by row.</p></div>
-          <div class="tile reveal"><p class="tile-kicker">Offline pass</p><p class="tile-title">Boarding pass works with no signal.</p></div>
+          <div class="tile tile--seats reveal"><p class="tile-kicker">Seat map</p><p class="tile-title">Tap a seat. Try it.</p><div class="seatmap" role="group" aria-label="Pick a seat"></div><p class="seat-pick" aria-live="polite">No seat selected</p></div>
+          <div class="tile tile--pass reveal"><p class="tile-kicker">Offline pass</p><p class="tile-title">Works with no signal.</p>
+            <button class="pass" aria-pressed="false" aria-label="Flip the boarding pass" data-cursor="Flip">
+              <span class="pass-inner">
+                <span class="pass-face pass-front"><span class="pass-meta"><span>AK703</span><span>Fri, 24 Oct</span></span><span class="pass-route">KUL <span>✈</span> SIN</span><span class="pass-meta"><span>Boarding 07:50</span><span>Seat 14A</span></span></span>
+                <span class="pass-face pass-back"><span class="barcode"></span><span class="pass-meta"><span>Gate L4</span><span>Zone 2</span></span></span>
+              </span>
+            </button>
+          </div>
           <div class="tile reveal"><p class="tile-kicker">Price alerts</p><p class="tile-title">Get notified when fares drop.</p></div>
         </div>
       </div>
@@ -294,7 +399,7 @@
           <div class="explore-list">
             <div class="explore-group" data-app="renly">
             <button class="explore-item is-open" aria-expanded="true" data-screen="assets/listing.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Listings</span><span class="explore-desc">Post a property in under a minute: photos, price, size and location, all in one clean form.</span></button>
-            <button class="explore-item" aria-expanded="false" data-screen="assets/buyer-public.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Buyer matching</span><span class="explore-desc">Every interested buyer gets a match score based on budget and preference, so you know who to call first.</span></button>
+            <button class="explore-item" aria-expanded="false" data-screen="assets/buyer-public.jpg" data-ai><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Buyer matching</span><span class="explore-desc">Every interested buyer gets a match score based on budget and preference, so you know who to call first.</span></button>
             <button class="explore-item" aria-expanded="false" data-screen="assets/chat-public.jpg"><svg class="explore-icon" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="currentColor" opacity=".9"/><path d="M11 6.5v9M6.5 11h9" stroke="var(--bg)" stroke-width="2" stroke-linecap="round"/></svg><span class="explore-name">Lead chat</span><span class="explore-desc">Reply to leads, share details and book viewings without switching apps.</span></button>
             </div>
             <div class="explore-group" data-app="flight" hidden>
@@ -304,15 +409,43 @@
             </div>
           </div>
           <div class="explore-visual">
-            <div class="phone phone--metal metal-renly" id="explore-phone"><div class="screen"><img id="explore-img" src="assets/listing.jpg" alt="Selected feature screen" class="is-active"></div></div>
+            <div class="explore-phone-wrap" data-cursor="Drag">
+            <div class="ai-glow" aria-hidden="true"></div>
+            <div class="phone phone--metal metal-renly" id="explore-phone" data-app="renly"><div class="screen"><img id="explore-img" src="assets/listing.jpg" alt="Selected feature screen" class="is-active" loading="lazy"></div></div>
+            </div>
             <p class="swatch-name" id="swatch-name">Emerald Titanium</p>
             <div class="swatches" role="group" aria-label="Phone finish">
               <button class="swatch" data-metal="metal-renly" data-name="Emerald Titanium" aria-pressed="true" aria-label="Emerald Titanium" style="--sw: #2f8f6d"></button>
-              <button class="swatch" data-metal="metal-flight" data-name="Ocean Titanium" aria-pressed="false" aria-label="Ocean Titanium" style="--sw: #3d8fd6"></button>
+              <button class="swatch" data-metal="metal-flight" data-name="Deep Blue Titanium" aria-pressed="false" aria-label="Deep Blue Titanium" style="--sw: #253f6b"></button>
               <button class="swatch" data-metal="metal-graphite" data-name="Graphite" aria-pressed="false" aria-label="Graphite" style="--sw: #4a4a4f"></button>
               <button class="swatch" data-metal="metal-silver" data-name="Silver" aria-pressed="false" aria-label="Silver" style="--sw: #d8d8dc"></button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY. Statements below are written from what is verifiable today; TODO(owner): confirm each one before presenting. -->
+    <section class="privacy" id="privacy" data-scene="light">
+      <div class="container">
+        <p class="eyebrow reveal">Privacy</p>
+        <h2 class="section-title">Privacy. Built in.</h2>
+        <div class="privacy-grid">
+          <article class="privacy-card reveal">
+            <span class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Open by design.</h3>
+            <p>The source code is public on GitHub, so anyone can see exactly what the apps do with your data.</p>
+          </article>
+          <article class="privacy-card reveal">
+            <span class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Straight from the source.</h3>
+            <p>Every APK is published on GitHub Releases by the developer. No third-party download sites in between.</p>
+          </article>
+          <article class="privacy-card reveal">
+            <span class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 11V8a6 6 0 1 1 12 0v3M5 11h14v10H5zM12 15v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Your account, protected.</h3>
+            <p>Sign-in keeps each agent's listings, leads and chats tied to their own account.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -322,9 +455,17 @@
       <div class="container">
         <p class="eyebrow reveal">Compare</p>
         <h2 class="section-title reveal">Which one is for you?</h2>
+        <div class="split reveal" data-cursor="Drag">
+          <img class="split-a" src="assets/renly-film-poster.jpg" alt="Renly" loading="lazy">
+          <img class="split-b" src="assets/skysaver-film-poster.jpg" alt="Sky Saver" loading="lazy">
+          <span class="split-label split-label--a">Renly</span>
+          <span class="split-label split-label--b">Sky Saver</span>
+          <span class="split-handle" aria-hidden="true"></span>
+          <input type="range" min="0" max="100" value="50" aria-label="Slide to compare Renly and Sky Saver">
+        </div>
         <div class="compare-grid reveal">
           <div class="compare-col" style="--accent: var(--renly-accent)">
-            <div class="phone phone--metal metal-renly compare-phone"><div class="screen"><img src="assets/renly-1.png" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-renly compare-phone"><div class="screen"><img src="assets/renly-1.png" alt="" class="is-active" loading="lazy"></div></div>
             <h3>Renly</h3>
             <p class="compare-tag">Find your buyer. Faster.</p>
             <a class="btn" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
@@ -338,7 +479,7 @@
             </dl>
           </div>
           <div class="compare-col" style="--accent: var(--flight-accent-strong)">
-            <div class="phone phone--metal metal-flight compare-phone"><div class="screen"><img src="assets/flight-1.png" alt="" class="is-active"></div></div>
+            <div class="phone phone--metal metal-flight compare-phone"><div class="screen"><img src="assets/flight-1.png" alt="" class="is-active" loading="lazy"></div></div>
             <h3>Sky Saver</h3>
             <p class="compare-tag">The sky, in your pocket.</p>
             <a class="btn" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a>
@@ -352,6 +493,34 @@
             </dl>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- GET: scan a QR code with an Android phone to download the APK -->
+    <section class="get" id="get" data-scene="light">
+      <div class="container">
+        <p class="eyebrow reveal">Ways to get it</p>
+        <h2 class="section-title">Scan. Install. Go.</h2>
+        <div class="get-grid">
+          <article class="get-card reveal" style="--accent: var(--renly-accent)">
+            <div class="qr" data-url="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk" role="img" aria-label="QR code to download Renly"></div>
+            <div class="get-body">
+              <p class="get-app"><img src="assets/renly-logo-mark.png" alt="" class="get-logo get-logo--renly" loading="lazy">Renly</p>
+              <p class="get-text">Point your Android phone's camera at the code to download the APK.</p>
+              <div class="get-actions"><a class="btn btn--sm" href="https://github.com/vertigo1794/renly/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a><a class="link" href="https://github.com/vertigo1794/renly" target="_blank" rel="noopener">View on GitHub</a></div>
+            </div>
+          </article>
+          <!-- TODO: replace USERNAME/sky-saver with the real repo (the QR follows this URL) -->
+          <article class="get-card reveal" style="--accent: var(--flight-accent-strong)">
+            <div class="qr" data-url="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk" role="img" aria-label="QR code to download Sky Saver"></div>
+            <div class="get-body">
+              <p class="get-app"><img src="assets/skysaver-logo-mark.png" alt="" class="get-logo get-logo--sky" loading="lazy">Sky Saver</p>
+              <p class="get-text">Point your Android phone's camera at the code to download the APK.</p>
+              <div class="get-actions"><a class="btn btn--sm" href="https://github.com/USERNAME/sky-saver/releases/latest/download/app-release.apk"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Download APK</a><a class="link" href="https://github.com/USERNAME/sky-saver" target="_blank" rel="noopener">View on GitHub</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="get-note">For Android 8.0 and later. Your phone may ask you to allow installs from your browser. <a href="#faq">Here's how.</a></p>
       </div>
     </section>
 
@@ -397,6 +566,7 @@
         <li id="fn-2">Measured on a mid-range Android test device. Actual performance may vary.</li>
         <li id="fn-3">Route data is sample data used for demonstration.</li>
         <li id="fn-4">Size of the latest GitHub release. May change with future updates.</li>
+        <li>3D phone model: <a href="https://sketchfab.com/3d-models/iphone-17-pro-4541aa8a28324b33a2baaf81d263aaec" target="_blank" rel="noopener">"iPhone 17 Pro"</a> by Ranguel, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Colours changed and app logos added.</li>
       </ol>
       <div class="footer-cols">
         <div><p class="footer-label">Renly</p><p>Fakhrullah Bin Rassul</p></div>
@@ -406,8 +576,19 @@
     </div>
   </footer>
 
+  <!-- WATCH THE FILM: full-screen player (both films back to back) -->
+  <dialog class="film-dialog" id="film-dialog" data-lenis-prevent aria-label="Home &amp; Away film">
+    <button class="film-dialog-close" type="button" aria-label="Close film"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4 4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <video class="film-dialog-video" playsinline controls preload="none"></video>
+    <p class="film-dialog-now" aria-live="polite"></p>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="effects.js?v=20261010061201"></script>
+  <script src="main.js?v=20261010061201"></script>
+  <script type="module" src="phone3d.js?v=20261010061201"></script>
 </body>
 </html>
